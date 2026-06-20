@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="Screenshots/bond_of_friendship.png">
+    <img src="Screenshots/bond_of_friendship.png" alt="Bond of Friendship Logo" width="350">
+  </a>
+</p>
+
+
 # Bond of Friendship
 
 This mod for Skyrim Special Edition introduces three lesser powers to make traveling with followers more comfortable. They are added to you automatically. Each lesser power opens a menu upon casting.
