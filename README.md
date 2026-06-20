@@ -19,7 +19,7 @@ This mod for Skyrim Special Edition introduces three lesser powers to make trave
 How the power behaves depends entirely on your weapon state when cast:
 
 - **Weapon Drawn (Pointing at a target):** Assigns the targeted NPC to the *Bond of Friendship* Actor Manager and immediately opens the single-actor menu to customize their features.
-- **Weapon Sheathed:** Opens the global configuration menu to manage features and options for all assigned actors at once.  
+- **Weapon Sheathed:** Opens the multiple-actor version of the menu to manage features and options for all assigned actors at once.
 
 ### Lesser Power 2: Bond of Friendship - Debug Utility
 
