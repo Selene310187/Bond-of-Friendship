@@ -4,9 +4,6 @@
   </a>
 </p>
 
-
-# Bond of Friendship
-
 This mod for Skyrim Special Edition introduces three lesser powers to make traveling with followers more comfortable. They are added to you automatically. Each lesser power opens a menu upon casting.
 
 ### Lesser Power 1: Bond of Friendship (the Actor Manager)
