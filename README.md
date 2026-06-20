@@ -1,4 +1,4 @@
-<picture align="center">
+<picture>
 <p align="center">   
     <img src="Screenshots/Bond of Friendship - Banner.png" alt="Bond of Friendship Logo" width="400"> 
 </p>
