@@ -60,5 +60,5 @@ The available requests and their scope depend entirely on your weapon state when
   - **Wait / Follow:** Orders all managed followers to wait or follow at once.
   - **Meeting Point:** Allows you to set or remove a custom meeting point anywhere in Skyrim. You can teleport yourself and/or your followers directly to this point. Includes an emergency teleport to Dragonsreach for both the player and followers.
 
-#### Available Commands (for Commanded Actors)
+#### Available Commands for Commanded Actors
 - Follow, Wait, Inventory
