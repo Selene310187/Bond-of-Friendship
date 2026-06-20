@@ -64,3 +64,12 @@ The available requests and their scope depend entirely on your weapon state when
 
 #### Available Commands for Commanded Actors
 - Follow, Wait, Inventory
+
+## Media & Menus
+
+### Followers
+<p align="center">
+  <a href="Screenshots/Followers.jpg" target="_blank">
+    <img src="Screenshots/Followers.jpg" alt="Your Followers" width="600">
+  </a>
+</p>
