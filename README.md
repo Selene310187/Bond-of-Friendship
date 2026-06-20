@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="Screenshots/bond_of_friendship.png">
-    <img src="Screenshots/bond_of_friendship.png" alt="Bond of Friendship Logo" width="350">
+  <a href="Screenshots/Bond of Friendship - Banner.png">
+    <img src="Screenshots/Bond of Friendship - Banner.png" alt="Bond of Friendship Logo" width="350">
   </a>
 </p>
 
