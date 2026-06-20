@@ -3,7 +3,8 @@
 This mod for Skyrim Special Edition introduces three lesser powers to make traveling with followers more comfortable. They are added to you automatically. Each lesser power opens a menu upon casting.
 
 ### Lesser Power 1: Bond of Friendship (the Actor Manager)
-- **Automatic Calm:** The actor in question will stop any hostility due to friendly fire towards actors, who have the ability as well, and the player.
+- **Automatic Calm:** A passive ability that automatically stops any hostility due to friendly fire towards other actors who possess this ability and the player.
+- **Friendly Hits:** This option toggles whether the actor ignores friendly fire or reacts to it.
 - **Friendly Hits:** This option toggles whether the actor ignores friendly fire or reacts to it.
 - **Knockout Prevention:** Grants a passive ability that automatically triggers when the actor's health drops below 40% to protect them from being knocked out.
 - **Edit Stats:** Customize the actor's attributes, including health, stamina, magicka, combat/magic/stealth skills, and resistances. (Only available in the single-actor version of this power. Requires UIExtensions.)
@@ -21,6 +22,24 @@ How the power behaves depends entirely on your weapon state when cast:
 - **Weapon Drawn (Pointing at a target):** Assigns the targeted NPC to the *Bond of Friendship* Actor Manager and immediately opens the single-actor menu to customize their features.
 - **Weapon Sheathed:** Opens the multiple-actor version of the menu to manage features and options for all assigned actors at once.
 
+
 ### Lesser Power 2: Bond of Friendship - Debug Utility
+
+A powerful troubleshooting tool designed to fix common Skyrim follower bugs, such as broken AI, stuck animations, or lost NPCs. 
+
+#### Available Debug Actions
+- **Disable/Enable:** Safely toggles the actor's existence to fix invisibility or visual glitches.
+- **Get Up!:** Instantly forces the actor out of the stuck crawling/bleeding-out animation on the ground.
+- **Reset AI:** Restarts the actor's artificial intelligence package if they stop responding. *(Requires ConsoleUtilSSE)*
+- **Recycle Actor:** Completely resets the actor to their default spawning state. *(Requires ConsoleUtilSSE)*
+- **Reset Inventory:** Restores the actor's default outfit and starting items. *(Requires SKSE)*
+- **Move To Me:** Teleports the selected actor directly to your current position.
+
+#### Context-Sensitive Casting Mechanics
+The scope of the Debug Utility depends on your weapon state when cast:
+
+- **Weapon Drawn:** Directly targets the NPC you are pointing at (the actor does not need to be assigned to the Actor Manager).
+- **Weapon Sheathed:** Opens a slot-based navigation menu (`First Slot`, `Next Slot`, `Previous Slot`, `Last Slot`) allowing you to select any assigned actor from a distance. Once selected, choose `> Actions` to execute any of the debug options above. This is highly useful for locating lost companions via *Move To Me* or fixing vanished NPCs via *Disable/Enable*.
+
 
 ### Lesser Power 3: Bond of Friendship - Requests
