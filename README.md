@@ -45,3 +45,22 @@ The scope of the Debug Utility depends on your weapon state when cast:
 
 
 ### Lesser Power 3: Bond of Friendship - Requests
+Provides a quick-access menu to issue core commands directly to your followers, avoiding tedious dialogue menus.
+
+#### Context-Sensitive Casting Mechanics
+The available requests and their scope depend entirely on your weapon state when cast:
+
+- **Weapon Drawn (Targeted Actor):** Opens the single-target requests menu with the following options:
+  - **Talk:** Initiates normal dialogue with the NPC (essential if the *Quick Menu* feature is active).
+  - **Wait / Follow:** Toggles whether the individual actor stands ground or stays with you.
+  - **Favor:** Commands the actor to perform a specific action in the environment (e.g., lockpicking, stealing, or sitting).
+  - **Inventory:** Opens the actor's inventory container directly to trade gear.
+
+- **Weapon Sheathed (All Assigned Followers):** Opens the global team menu to issue commands to your entire party simultaneously:
+  - **Wait / Follow:** Orders all managed followers to wait or follow at once.
+  - **Meeting Point:** Allows you to set or remove a custom meeting point anywhere in Skyrim. You can teleport yourself and/or your followers directly to this point. Includes an emergency teleport to Dragonsreach for both the player and followers.
+
+#### Available Commands (for Commanded Actors)
+- **Follow:** Orders the selected actor to stop waiting and resume following you.
+- **Wait:** Commands the actor to stay at their current position until ordered otherwise.
+- **Inventory:** Opens the actor's inventory container directly, allowing you to trade gear or provide items for the *Auto Equip* feature.
