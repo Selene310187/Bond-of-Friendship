@@ -73,3 +73,16 @@ The available requests and their scope depend entirely on your weapon state when
     <img src="Screenshots/Followers.jpg" alt="Your Followers" width="600">
   </a>
 </p>
+
+<details>
+  <summary>📸 View Menu Screenshots (Click to expand)</summary>
+  <br>
+  <p align="center">
+    <a href="Screenshots/menu_main.png" target="_blank">
+      <img src="Screenshots/menu_main.png" alt="Main Menu" width="400" style="margin: 5px;">
+    </a>
+    <a href="Screenshots/menu_mcm.png" target="_blank">
+      <img src="Screenshots/menu_mcm.png" alt="MCM Settings" width="400" style="margin: 5px;">
+    </a>
+  </p>
+</details>
