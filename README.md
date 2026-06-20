@@ -1,6 +1,9 @@
-<picture align="center">
-    <img src="Screenshots/Bond of Friendship - Banner.png" alt="Bond of Friendship Logo" width="400">   
-</picture>
+<p align="center">
+    [![](Screenshots/Bond of Friendship - Banner.png](#)
+    <a href="#">
+    <img src="Screenshots/Bond of Friendship - Banner.png" alt="Bond of Friendship Logo" width="400"> 
+    </a>    
+</p>
 This mod for Skyrim Special Edition introduces three lesser powers to make traveling with followers more comfortable. They are added to you automatically. Each lesser power opens a menu upon casting.
 
 ### Lesser Power 1: Bond of Friendship (the Actor Manager)
