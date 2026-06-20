@@ -2,8 +2,8 @@
 
 It's a mod for Skyrim Special Edition containing three lesser powers which make which make traveling with followers more comfortable. They are added to you automatically.
 
-"Bond of Friendship": Automatic Calm, modify friendly hits, edit stats, toggle mortality and much more
+### Lesser Power 1: Bond of Friendship
 
-"Bond of Friendship - Debug Utility": debug actors
+### Lesser Power 2: Bond of Friendship - Debug Utility"
 
-"Bond of Friendship - Requests": command followers
+### Lesser Power 3: Bond of Friendship - Requests
