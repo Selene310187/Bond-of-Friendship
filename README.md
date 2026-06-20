@@ -8,7 +8,7 @@ This mod for Skyrim Special Edition introduces three lesser powers to make trave
 - **Knockout Prevention:** Grants a passive ability that automatically triggers when the actor's health drops below 40% to protect them from being knocked out.
 - **Edit Stats:** Customize the actor's attributes, including health, stamina, magicka, combat/magic/stealth skills, and resistances. (Only available in the single-actor version of this power. Requires UIExtensions.)
 - **Mortality:** Change whether the actor is essential (immortal) or can be killed in combat.
-- **Quick Menu** Replaces the NPC's default activation with the "Bond of Friendship - Requests" menu. While active, normal dialogue options are suppressed, but you can still access them via the custom "Talk" command. 
+- **Quick Menu** Replaces the actor's default activation with the "Bond of Friendship - Requests" menu. While active, normal dialogue options are suppressed, but you can still access them via the custom "Talk" command. 
 - **Teammate:** Toggles the actor's teammate status, ensuring they draw their weapon and sneak in sync with the player.
 - **Auto Equip:** Forces the actor to automatically equip items (weapons, armor, etc.) placed into their inventory via the "Bond of Friendship - Requests -> Inventory" menu. Should be disabled if you use external outfit managers.
 - **Auto Teleport:** Automatically teleports the actor to your position if they have fallen too far behind.
