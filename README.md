@@ -66,7 +66,7 @@ The available requests and their scope depend entirely on your weapon state when
 - Follow, Wait, Inventory
 
 ## Media & Menus
-*(Ctrl + Click to open image in a new tab)*
+*(Windows/Linux: Ctrl + Click to open image in a new tab | macOS: Cmd + Click)*
 
 ### Followers
 <p align="center">
