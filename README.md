@@ -7,7 +7,6 @@ Used for managing features and actors (i.e. followers and all types of commanded
 
 - **Automatic Calm:** A passive ability that automatically stops any hostility due to friendly fire towards other actors who possess this ability and the player.
 - **Friendly Hits:** This option toggles whether the actor ignores friendly fire or reacts to it.
-- **Friendly Hits:** This option toggles whether the actor ignores friendly fire or reacts to it.
 - **Knockout Prevention:** Grants a passive ability that automatically triggers when the actor's health drops below 40% to protect them from being knocked out.
 - **Edit Stats:** Customize the actor's attributes, including health, stamina, magicka, combat/magic/stealth skills, and resistances. (Only available in the single-actor version of this power. Requires UIExtensions.)
 - **Mortality:** Change whether the actor is essential (immortal) or can be killed in combat.
