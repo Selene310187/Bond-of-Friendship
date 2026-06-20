@@ -65,7 +65,7 @@ The available requests and their scope depend entirely on your weapon state when
 #### Available Commands for Commanded Actors
 - Follow, Wait, Inventory
 
-## Media & Menus
+## Media
 *(Windows/Linux: Ctrl + Click to open image in a new tab | macOS: Cmd + Click)*
 
 ### Followers
