@@ -1,0 +1,33 @@
+name: 💡 Feature Request / Suggestion
+description: Propose a new idea or enhancement for Bond of Friendship
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a cool idea to expand the mod? Please describe it below! I am always open to constructive ideas and suggestions that fit the core concept of Bond of Friendship.
+
+  - type: textarea
+    id: idea-summary
+    attributes:
+      label: 🚀 What is your idea?
+      description: A clear and concise description of what you would like to see added or improved.
+      placeholder: e.g., I love the Teammate feature, but I wish followers would also...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution-description
+    attributes:
+      label: ✨ Describe how it should work
+      description: Detailed explanation of how you imagine this feature working in-game.
+      placeholder: Describe the mechanics, menus, or gameplay behavior you have in mind...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives or Workarounds
+      description: Are there any alternative ways or other mods that already achieve this?
+      placeholder: Optional...
