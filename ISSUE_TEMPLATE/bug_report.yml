@@ -1,0 +1,51 @@
+name: 🐛 Bug Report
+description: Create a report to help improve Bond of Friendship
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Tell me what happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Tell me how to make the bug happen again.
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See error...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: skyrim-version
+    attributes:
+      label: 🎮 Skyrim Version
+      description: Which version of Skyrim are you running?
+      options:
+        - "1.6.640 (AE)"
+        - "1.6.1170 or newer (Latest AE)"
+        - "1.5.97 (SE)"
+        - "Other (Please specify in description)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: required-mods
+    attributes:
+      label: 🛠️ Installed Requirements
+      description: Confirm you have installed the required mods (SKSE, Papyrus Extender, ConsoleUtil, UIExtensions).
+      placeholder: e.g., Yes, I have ConsoleUtilSSE NG installed.
+    validations:
+      required: true
