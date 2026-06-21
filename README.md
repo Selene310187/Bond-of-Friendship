@@ -68,7 +68,7 @@ The available requests and their scope depend entirely on your weapon state when
 ## Media
 *(Windows/Linux: Ctrl + Click to open image in a new tab | macOS: Cmd + Click)*
 
-Followers
+<p align="center">Followers</p>
 <p align="center">
   <a href="Screenshots/Followers.jpg">
     <img src="Screenshots/Followers.jpg" alt="Your Followers" width="600">
@@ -78,7 +78,7 @@ Followers
 <details>
   <summary>📸 View Menu Screenshots (Click to expand)</summary>
   <br>
-Actor Manager    
+<p align="center">Actor Manager</p>    
   <p align="center">
     <a href="Screenshots/Actor Manager - Page 1.jpg">
       <img src="Screenshots/Actor Manager - Page 1.jpg" alt="Actor Manager - Page 1" width="300" style="margin: 5px;">
