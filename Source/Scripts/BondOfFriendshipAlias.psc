@@ -127,6 +127,9 @@ Event OnLoad()
     Actor akTarget = Self.GetActorReference()
     if ActorWasDisabled == True
         ActorWasDisabled = False
+        if akTarget.IsInFaction(Requests.BondOfFriendshipAutoEquip)
+            EquipCurrentOutfit()
+        endif
     endif
 EndEvent 
 
