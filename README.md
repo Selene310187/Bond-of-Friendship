@@ -80,10 +80,10 @@ The available requests and their scope depend entirely on your weapon state when
   <br>
   <p align="center">
     <a href="Screenshots/menu_main.png" target="_blank">
-      <img src="Screenshots/menu_main.png" alt="Main Menu" width="400" style="margin: 5px;">
+      <img src="Screenshots/Actor Manager - Page 1.jpg" alt="Actor Manager - Page 1" width="400" style="margin: 5px;">
     </a>
-    <a href="Screenshots/menu_mcm.png" target="_blank">
-      <img src="Screenshots/menu_mcm.png" alt="MCM Settings" width="400" style="margin: 5px;">
+    <a href="Screenshots/Actor Manager - Page 2.jpg" target="_blank">
+      <img src="Screenshots/menu_mcm.png" alt="Actor Manager - Page 2" width="400" style="margin: 5px;">
     </a>
   </p>
 </details>
