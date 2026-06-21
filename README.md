@@ -23,7 +23,7 @@ Used for managing features and actors (i.e. followers and all types of commanded
 #### Context-Sensitive Casting Mechanics
 How the power behaves depends entirely on your weapon state when cast:
 
-- **Weapon Drawn (Pointing at a target):** Assigns the targeted NPC to the *Bond of Friendship* Actor Manager and immediately opens the single-actor menu to customize their features.
+- **Weapon Drawn (Pointing at a target):** Assigns the targeted NPC to the *Bond of Friendship* Actor Manager and immediately opens the single-actor menu to customize their features. If a follower or summon becomes hostile due to friendly fire, you can manually calm them using the lesser power *(Requires Papyrus Extender)*.
 - **Weapon Sheathed:** Opens the multiple-actor version of the menu to manage features and options for all assigned actors at once.
 
 
