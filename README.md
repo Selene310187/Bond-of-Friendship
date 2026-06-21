@@ -91,5 +91,11 @@ The available requests and their scope depend entirely on your weapon state when
     <a href="Screenshots/Debug Utility.jpg"><img src="Screenshots/Debug Utility.jpg" alt="Debug Utility" width="300"></a>
     <a href="Screenshots/Debug Actions.jpg"><img src="Screenshots/Debug Actions.jpg" alt="Debug Actions" width="300"></a>
   </p>  
-    
+<p align="center">Edit Stats
+<br>
+<br>    
+  <a href="Screenshots/Edit Stats.jpg">
+    <img src="Screenshots/Edit Stats.jpg" alt="Edit Stats" width="300">
+  </a>
+</p>    
 </details>
