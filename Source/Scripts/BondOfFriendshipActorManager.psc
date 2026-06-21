@@ -193,7 +193,19 @@ Function TargetActor(Int iLoopIterations = 20, Float fAreaToSearch = 1500.0)
             endif 
 
             if ActorTarget && ActorTarget.GetCombatTarget() == PlayerRef
-                BondOfFriendshipHostileActor.Show()
+                 if Maintenance.PapyrusExtenderActive == 0
+                    BondOfFriendshipHostileActor.Show()
+                 endif
+                 if Maintenance.PapyrusExtenderActive == 1
+                    if !IsPlayerFollower(ActorTarget as Actor) && !IsPlayerSummon(ActorTarget as Actor)
+                        BondOfFriendshipHostileActor.Show()
+                    endif 
+                    ;== Manual Calm
+                    if IsPlayerFollower(ActorTarget as Actor) || IsPlayerSummon(ActorTarget as Actor)
+                         ActorTarget.StopCombat()
+                         ActorTarget.StopCombatAlarm()
+                    endif
+                 endif   
             endif
         endif
     endif    

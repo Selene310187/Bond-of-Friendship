@@ -162,15 +162,11 @@ Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
             EndIf
         endif
         
-        if !Follower.IsInFaction(ActorManager.CurrentFollowerFaction) && targetActor == PlayerRef
+        if !Follower.IsInFaction(ActorManager.CurrentFollowerFaction) && targetActor == PlayerRef && !Follower.IsCommandedActor()
             shouldStopCombat = true
         endif
         
-        if targetActor.IsCommandedActor() && !targetActor.IsHostileToActor(PlayerRef)
-            shouldStopCombat = true
-        endif  
-        
-        if SpectralDrumRace && targetActor.GetRace() == SpectralDrumRace
+        if SpectralDrumRace && targetActor.GetRace() == SpectralDrumRace && !targetActor.HasSpell(BondOfFriendshipAbility)
             shouldStopCombat = true
         endif    
        
