@@ -68,8 +68,8 @@ The available requests and their scope depend entirely on your weapon state when
 ## Media
 *(Windows/Linux: Ctrl + Click to open image in a new tab | macOS: Cmd + Click)*
 
-### Followers
-<p align="center">
+
+<p align="center">### Followers
   <a href="Screenshots/Followers.jpg">
     <img src="Screenshots/Followers.jpg" alt="Your Followers" width="600">
   </a>
