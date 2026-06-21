@@ -78,10 +78,11 @@ The available requests and their scope depend entirely on your weapon state when
 
 <details>
   <summary>📸 View Menu Screenshots (Click to expand)</summary>
-
-    
-<p align="center">Actor Manager</p>    
-  <p align="center">
+    <br>
+    <br>
+<p align="center">Actor Manager
+    <br>
+    <br>
     <a href="Screenshots/Actor Manager - Page 1.jpg"><img src="Screenshots/Actor Manager - Page 1.jpg" alt="Actor Manager - Page 1" width="300"></a>
     <a href="Screenshots/Actor Manager - Page 2.jpg"><img src="Screenshots/Actor Manager - Page 2.jpg" alt="Actor Manager - Page 2" width="300"></a>
   </p>
