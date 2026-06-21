@@ -77,6 +77,7 @@ The available requests and their scope depend entirely on your weapon state when
 
 <details>
   <summary>📸 View Menu Screenshots (Click to expand)</summary>
+    
 <p align="center">Actor Manager</p>    
   <p align="center">
     <a href="Screenshots/Actor Manager - Page 1.jpg">
