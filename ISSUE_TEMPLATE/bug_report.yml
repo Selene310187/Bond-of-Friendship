@@ -1,51 +1,86 @@
 name: 🐛 Bug Report
-description: Create a report to help improve Bond of Friendship
+description: Report a bug or unintended behavior in Bond of Friendship
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report a bug! Please fill out the information below.
+        Thank you for reporting a bug! Please fill out the form below as completely as possible to help me investigate the issue.
 
   - type: textarea
-    id: description
+    id: short-summary
     attributes:
-      label: 📝 Bug Description
-      description: A clear and concise description of what the bug is.
-      placeholder: Tell me what happened...
+      label: 📝 Short Summary
+      description: Provide a quick overview of the issue (this will help for the issue title).
+      placeholder: e.g., Automatic Calm fails to trigger during dragon fights
     validations:
       required: true
 
   - type: textarea
-    id: reproduction
+    id: environment-setup
     attributes:
-      label: 🔄 Steps to Reproduce
-      description: Tell me how to make the bug happen again.
+      label: 🎮 1. Game Environment & Party Setup
+      description: To help narrow down compatibility or logic issues, please list your current setup.
       placeholder: |
-        1. Go to...
-        2. Click on...
-        3. See error...
+        * Active Followers: (e.g., Xelzaz, Inigo, Serana, vanilla follower)
+        * Summons / Commanded Actors: (e.g., Flame Atronach, Dead Thrall)
+        * Other Follower Frameworks / Outfit Managers: (Are you using AFT, EFF, NFF, or external outfit mods? Yes/No)
     validations:
       required: true
 
-  - type: dropdown
-    id: skyrim-version
+  - type: checkboxes
+    id: lesser-power
     attributes:
-      label: 🎮 Skyrim Version
-      description: Which version of Skyrim are you running?
+      label: ⚡ 2. Lesser Power & Weapon State
+      description: Which specific tool were you using, and what was your character's state? (Check all that apply)
       options:
-        - "1.6.640 (AE)"
-        - "1.6.1170 or newer (Latest AE)"
-        - "1.5.97 (SE)"
-        - "Other (Please specify in description)"
+        - label: 'Lesser Power "Bond of Friendship" (Actor Manager assignment, Automatic Calm, Edit Stats, Teammate)'
+        - label: '"Bond of Friendship - Debug Utility" (Disable/Enable, Get Up!, Reset AI, Recycle, Move To Me, etc.)'
+        - label: '"Bond of Friendship - Requests" (Talk, Wait/Follow, Favor, Inventory, Meeting Point)'
+        - label: 'Weapon Drawn (Targeting a specific actor)'
+        - label: 'Weapon Sheathed (Applying to all assigned actors / navigating via slot buttons)'
+
+  - type: checkboxes
+    id: affected-feature
+    attributes:
+      label: 🛠️ 3. Affected Feature
+      description: Which specific component of the mod did not work as expected? (Check all that apply)
+      options:
+        - label: 'Automatic Calm: (Hostility from friendly fire was not stopped / failed to calm the right actors)'
+        - label: 'Automatic Teleport: (Followers or commanded actors failed to teleport when falling behind or changing cells)'
+        - label: 'Scan Followers: (The automated group scanning via Papyrus Extender missed some actors or summons)'
+        - label: 'Follower''s Summon Detection (Passive Script): (The background script failed to automatically detect a follower''s summon, or failed to add the "Automatic Calm" feature to that summon)'
+        - label: 'Edit Stats Menu: (Values for health, stamina, magicka, skills, or resistances did not apply)'
+        - label: 'Knockout Prevention: (The protective ability failed to trigger or did not reset health/limbs when below 40% health)'
+        - label: 'Auto Equip: (Items placed in inventory via Requests -> Inventory failed to equip automatically, or conflicted with external outfit managers)'
+        - label: 'Teammate Feature: (Follower failed to sneak or draw weapon in sync with the player)'
+        - label: 'Quick Menu Feature: (Dialogue suppression failed, or the quick access menu did not open correctly)'
+        - label: 'Debug Utility Actions: (Actions like ''Get Up!'', ''Reset AI'', ''Move To Me'', or slot-navigation failed)'
+        - label: 'Requests / Wait & Follow: (Commands to wait or follow failed to execute or apply to the group)'
+        - label: 'Requests / Inventory: (Opening the inventory via casting with weapon drawn (targeting a specific actor) or managing items failed)'
+        - label: 'Requests / Meeting Point: (Setting/removing a meeting point, teleporting to it, or the Dragonsreach emergency teleport bugged out)'
+
+  - type: textarea
+    id: observed-behavior
+    attributes:
+      label: 🔍 4. Observed Behavior (What happened?)
+      description: Please describe the exact issue in detail.
+      placeholder: |
+        * The Problem: [Describe what went wrong]
+        * Visual Indicators / Notifications: (Did the green calming shader trigger? Did you see any specific Debug.Notifications on the screen?)
     validations:
       required: true
 
   - type: textarea
-    id: required-mods
+    id: reproduction-steps
     attributes:
-      label: 🛠️ Installed Requirements
-      description: Confirm you have installed the required mods (SKSE, Papyrus Extender, ConsoleUtil, UIExtensions).
-      placeholder: e.g., Yes, I have ConsoleUtilSSE NG installed.
+      label: 🔄 5. Situation & Steps to Reproduce
+      description: How can I repeat the bug?
+      placeholder: |
+        * Location / Situation: (e.g., during intense dungeon combat, right after fast traveling)
+        * Steps to repeat the bug:
+          1. Go to...
+          2. Use power...
+          3. Expected result vs. actual result
     validations:
       required: true
