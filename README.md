@@ -145,7 +145,10 @@ I highly recommend using a mod manager to keep your game clean and avoid install
 ## Feedback & Bug Reports
 Bug reports and constructive feedback are always welcome! 
 
-If you encounter any issues during your playthrough or have suggestions, please feel free to open an issue here on GitHub. When reporting a bug, **please use the provided template** and fill out the details so I can help you fix the issue quickly.
+If you encounter any issues during your playthrough or have suggestions, you can report them under the following link:
+👉 **[https://github.com/Selene310187/Bond-of-Friendship/issues](https://github.com/Selene310187/Bond-of-Friendship/issues)**
+
+When creating an issue, **please select and use the provided template** (either for a Bug Report or a Feature Request) and fill out the details so I can look into it quickly.
  <br>
  <br>
 ##  Script Sources 
