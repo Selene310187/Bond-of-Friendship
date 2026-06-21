@@ -151,7 +151,6 @@ Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
     
     if Follower.HasSpell(BondOfFriendshipAbility) && aeCombatState == 1
         if targetActor.HasSpell(BondOfFriendshipAbility)
-            ;debug.notification(targetActor.GetActorBase().GetName())
             shouldStopCombat = true
         endif    
         if !targetActor.IsHostileToActor(PlayerRef) && !targetActor.HasSpell(BondOfFriendshipAbility) && targetActor != PlayerRef
@@ -163,6 +162,10 @@ Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
         endif
         
         if !Follower.IsInFaction(ActorManager.CurrentFollowerFaction) && targetActor == PlayerRef && !Follower.IsCommandedActor()
+            shouldStopCombat = true
+        endif
+        
+        if targetActor.IsCommandedActor() && !targetActor.IsHostileToActor(PlayerRef)
             shouldStopCombat = true
         endif
         
