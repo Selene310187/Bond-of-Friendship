@@ -85,6 +85,9 @@ Function StartLesserPower2Menu(bool AOE = True)
 EndFunction    
 
 int Function DebugActorsMenu(bool bMenu = True)
+    i = 0
+    CurrentSlot = 1
+    CheckCurrentSlot()
     While bMenu
         int button = BondOfFriendshipMenuDebugActors.Show(CurrentSlot)
     
@@ -121,7 +124,7 @@ int Function DebugActorsMenu(bool bMenu = True)
             endif
         elseif button == 5 ; exit
             bMenu = False
-            ClearOnExit()
+            BondOfFriendshipSlotCurrent.Clear()
             Return 0
         endif
     EndWhile    
@@ -147,14 +150,12 @@ int Function DebugActionsMenu()
     elseif button == 6 ; Back
         Return 1
     elseif button == 7 ; Exit
-        ClearOnExit()
+        BondOfFriendshipSlotCurrent.Clear()
         Return 0    
     endif    
 EndFunction
 
-Function ClearOnExit()
-    BondOfFriendshipSlotCurrent.Clear()
-EndFunction    
+   
 
 int Function DebugDisableEnable()
     Target = BondOfFriendshipSlotCurrent.getactorreference()
@@ -164,6 +165,7 @@ int Function DebugDisableEnable()
         BondOfFriendshipSlotCurrent.GetActorRef().disable()
         Utility.Wait(1)
         BondOfFriendshipSlotCurrent.GetActorRef().enable()
+        BondOfFriendshipSlotCurrent.Clear()
         Return 0
     elseif button == 1
         Return 2 ; Back
@@ -179,6 +181,7 @@ int Function DebugGetUp()
         BondOfFriendshipStagger.Cast(Game.GetPlayer(), Target)
         Target.ResetHealthAndLimbs()
         Target.EvaluatePackage()
+        BondOfFriendshipSlotCurrent.Clear()
         Return 0
     elseif button == 1
         Return 2    
@@ -194,7 +197,8 @@ int Function DebugResetInventory()
             Target.ResetInventory()
         else
             BondOfFriendshipMsgSKSE.Show()
-        endif    
+        endif
+        BondOfFriendshipSlotCurrent.Clear()
         Return 0
     elseif button == 1
         Return 2    
@@ -215,7 +219,8 @@ int Function DebugResetAI()
             BondOfFriendshipMsgConsoleUtil.Show()
         elseif Maintenance.ConsoleUtilActive == False && Maintenance.SKSEActive == False
             BondOfFriendshipMsgConsoleUtilSKSE.Show()
-        endif    
+        endif
+        BondOfFriendshipSlotCurrent.Clear()
         Return 0
     elseif button == 1
         Return 2    
@@ -256,6 +261,7 @@ Event OnUpdate()
     Target.SetAngle(Target.GetAngleX(), Target.GetAngleY(), Target.GetAngleZ() + zOffset)
     Target.ResetInventory()
     Target.SetAlpha(1)
+    BondOfFriendshipSlotCurrent.Clear()
 EndEvent    
 
 int Function DebugMoveToMe()
@@ -268,6 +274,7 @@ int Function DebugMoveToMe()
         float zOffset = Target.GetHeadingAngle(PlayerRef)
         Target.SetAngle(Target.GetAngleX(), Target.GetAngleY(), Target.GetAngleZ() + zOffset)
         Target.Enable()
+        BondOfFriendshipSlotCurrent.Clear()
         Return 0
     elseif button == 1
         Return 2    
