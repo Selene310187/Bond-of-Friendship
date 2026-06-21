@@ -84,18 +84,37 @@ The available requests and their scope depend entirely on your weapon state when
     <br>
     <a href="Screenshots/Actor Manager - Page 1.jpg"><img src="Screenshots/Actor Manager - Page 1.jpg" alt="Actor Manager - Page 1" width="300"></a>
     <a href="Screenshots/Actor Manager - Page 2.jpg"><img src="Screenshots/Actor Manager - Page 2.jpg" alt="Actor Manager - Page 2" width="300"></a>
-  </p>
+  </p> 
+<p align="center">Edit Stats and Actor List
+<br>
+<br>    
+  <a href="Screenshots/Edit Stats.jpg"><img src="Screenshots/Edit Stats.jpg" alt="Edit Stats" width="300"></a>
+  <a href="Screenshots/Actor List.jpg"><img src="Screenshots/Actor List.jpg" alt="Actor List" width="300"></a>
+</p>
 <p align="center">Debug Utility and Debug Actions
     <br>
     <br>
     <a href="Screenshots/Debug Utility.jpg"><img src="Screenshots/Debug Utility.jpg" alt="Debug Utility" width="300"></a>
     <a href="Screenshots/Debug Actions.jpg"><img src="Screenshots/Debug Actions.jpg" alt="Debug Actions" width="300"></a>
+  </p>
+<p align="center">Requests - Single and Multiple Actor Version
+    <br>
+    <br>
+    <a href="Screenshots/Requests - Single Actor Version.jpg"><img src="Screenshots/Requests - Single Actor Version.jpg" alt="Requests - Single Actor Version" width="300"></a>
+    <a href="Screenshots/Requests - Multiple Actor Version.jpg"><img src="Screenshots/Requests - Multiple Actor Version.jpg" alt="Requests - Multiple Actor Version" width="300"></a>
+  </p>
+  <p align="center">Requests - Meeting Point
+    <br>
+    <br>    
+    <a href="Screenshots/Requests - Meeting Point.jpg"><img src="Screenshots/Requests - Meeting Point.jpg" alt="Requests - Meeting Point" width="300"></a>
   </p>  
-<p align="center">Edit Stats
-<br>
-<br>    
-  <a href="Screenshots/Edit Stats.jpg">
-    <img src="Screenshots/Edit Stats.jpg" alt="Edit Stats" width="300">
-  </a>
-</p>    
 </details>
+
+## Requirements
+
+To unlock all features, please install these mods. Make sure to check their pages for any additional dependencies they might need.
+
+- <a href="https://www.nexusmods.com/skyrimspecialedition/mods/30379">**Skyrim Script Extender (SKSE64)**</a>
+- <a href="https://www.nexusmods.com/skyrimspecialedition/mods/22854">**powerofthree's Papyrus Extender**</a>
+- <a href="https://www.nexusmods.com/skyrimspecialedition/mods/76649">**ConsoleUtilSSE NG**</a> (Highly recommended, as it works on all Skyrim versions. Alternatively, you can use the original <a href="https://www.nexusmods.com/skyrimspecialedition/mods/24858">*ConsoleUtilSSE*</a> if you are on version 1.6.640 or older).
+- <a href="https://www.nexusmods.com/skyrimspecialedition/mods/17561">**UIExtensions**</a> (together with <a href="https://www.nexusmods.com/skyrimspecialedition/mods/127375">*UIExtensions Fixed ESP Plugin*</a>)
