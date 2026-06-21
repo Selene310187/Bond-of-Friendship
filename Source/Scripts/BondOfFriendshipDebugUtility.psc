@@ -13,7 +13,8 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
     if !BondOfFriendshipDebugUtilityQ.isrunning()
         BondOfFriendshipDebugUtilityQ.Start()
     endif
-
+    
+    
     Target = akTarget
     if Target.GetCurrentScene() != None
         Debug.MessageBox("The actor is currently in a scene. Therefore, the menu cannot be accessed.")
@@ -21,7 +22,7 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
     else 
         if Target
             DebugUtility.BondOfFriendshipSlotCurrent.ForceRefTo(Target as ObjectReference)
-            DebugUtility.StartLesserPower2Menu()
+            DebugUtility.StartLesserPower2Menu(AOE = False)
         endif
     endif    
 EndEvent

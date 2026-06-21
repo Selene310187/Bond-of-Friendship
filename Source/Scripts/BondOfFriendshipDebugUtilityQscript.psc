@@ -46,13 +46,19 @@ Function CheckCurrentSlot()
 EndFunction
 
 
-Function StartLesserPower2Menu()
+Function StartLesserPower2Menu(bool AOE = True)
+    
+    ;Debug.Notification(BondOfFriendshipSlotCurrent.GetActorRef().GetActorBase().GetName())
     
     int NextMenu = 1
 
     if NextMenu == 0
         Return
-    endif 
+    endif
+   
+    if AOE == False
+        NextMenu = 2
+    endif            
 
     While NextMenu > 0
         if NextMenu == 1
@@ -124,7 +130,7 @@ EndFunction
 
 
 int Function DebugActionsMenu()
-    Target = BondOfFriendshipSlotCurrent.GetActorRef()
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     int button = BondOfFriendshipMenuDebugActorsActions.Show()
     if button == 0 ; Debug Disable/Enable
         Return 21
@@ -147,12 +153,11 @@ int Function DebugActionsMenu()
 EndFunction
 
 Function ClearOnExit()
-    Target = None
     BondOfFriendshipSlotCurrent.Clear()
 EndFunction    
 
 int Function DebugDisableEnable()
-    
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     int button = BondOfFriendshipDebugDisableEnable.Show()
     if button == 0 ; Apply
         BondOfFriendshipFeatureDone.Show()
@@ -166,6 +171,7 @@ int Function DebugDisableEnable()
 EndFunction
 
 int Function DebugGetUp()
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     int button = BondOfFriendshipDebugGetUp.Show()
     if button == 0
         BondOfFriendshipFeatureDone.Show()
@@ -180,6 +186,7 @@ int Function DebugGetUp()
 EndFunction
 
 int Function DebugResetInventory()
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     int button = BondOfFriendshipDebugResetInventory.Show()
     if button == 0
         if Maintenance.SKSEActive == True
@@ -195,6 +202,7 @@ int Function DebugResetInventory()
 EndFunction
 
 int Function DebugResetAI()
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     int button = BondOfFriendshipDebugResetAI.Show()
     if button == 0
         if Maintenance.SKSEActive == True && Maintenance.ConsoleUtilActive == True
@@ -215,11 +223,12 @@ int Function DebugResetAI()
 EndFunction
 
 int Function DebugRecycleActor()
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     int button = BondOfFriendshipDebugRecycleActor.Show()
     if button == 0
         if Maintenance.SKSEActive == True && Maintenance.ConsoleUtilActive == True
             BondOfFriendshipFeatureDone.Show()
-            ConsoleUtil.SetSelectedReference(BondOfFriendshipSlotCurrent.GetActorRef())
+            ConsoleUtil.SetSelectedReference(BondOfFriendshipSlotCurrent.getactorreference())
             Target.SetAlpha(0)
             ConsoleUtil.ExecuteCommand("RecycleActor")
             MoveBackUpdateInventory()
@@ -241,6 +250,7 @@ Function MoveBackUpdateInventory()
 EndFunction
 
 Event OnUpdate()
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     Target.moveto(PlayerRef, 100.0 * Math.Sin(PlayerRef.GetAngleZ()), 100.0 * Math.Cos(PlayerRef.GetAngleZ()))
     float zOffset = Target.GetHeadingAngle(PlayerRef)
     Target.SetAngle(Target.GetAngleX(), Target.GetAngleY(), Target.GetAngleZ() + zOffset)
@@ -249,6 +259,7 @@ Event OnUpdate()
 EndEvent    
 
 int Function DebugMoveToMe()
+    Target = BondOfFriendshipSlotCurrent.getactorreference()
     int button = BondOfFriendshipDebugMoveToMe.Show()
     if button == 0
         BondOfFriendshipFeatureDone.Show()

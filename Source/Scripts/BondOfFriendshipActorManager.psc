@@ -177,8 +177,9 @@ Function TargetActor(Int iLoopIterations = 20, Float fAreaToSearch = 1500.0)
                             Return
                         endif   
                     elseif Variables.CurrentLesserPower == 2
+                        DebugUtility.BondOfFriendshipSlotCurrent.Clear()
                         DebugUtility.BondOfFriendshipSlotCurrent.ForceRefTo(ActorTarget as ObjectReference)
-                        DebugUtility.StartLesserPower2Menu()
+                        DebugUtility.StartLesserPower2Menu(AOE = False)
                     elseif Variables.CurrentLesserPower == 3
                         if ActorTarget.GetCurrentScene() == None
                             Requests.AliasActorTemp.ForceRefTo(ActorTarget as ObjectReference)

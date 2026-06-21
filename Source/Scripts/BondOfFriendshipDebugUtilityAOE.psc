@@ -30,8 +30,7 @@ Event OnEffectStart(Actor target, Actor caster)
         if ActorManager.ActorSlots > 9
             ActorManager.StartLesserPower1Menu(abPleaseAssign = True)
         elseif ActorManager.ActorSlots < 10
-            DebugUtility.CheckCurrentSlot()
-            DebugUtility.StartLesserPower2Menu()
+            DebugUtility.StartLesserPower2Menu(AOE = True)
         endif
     endif    
 EndEvent
