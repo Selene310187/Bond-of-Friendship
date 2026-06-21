@@ -6,7 +6,7 @@
 This mod for Skyrim Special Edition introduces three lesser powers to make traveling with followers more comfortable. They are added to you automatically. Each lesser power opens a menu upon casting.
 
 ### Lesser Power 1: Bond of Friendship (the Actor Manager)
-Used for managing features and actors (i.e. followers and all types of commanded actors such as summons or reanimated minions).
+Used for managing features and actors (i.e. followers and all types of summons including reanimated minions).
 
 - **Automatic Calm:** A passive ability that automatically stops any hostility due to friendly fire towards other actors who possess this ability, as well as the player. All of your follower's summons automatically receive the ability (*requires Papyrus Extender*). However, attacking your own summons won't trigger automatic calming. You will need to enable the 'Ignore Friendly Hits' setting as well to cover this case.
 - **Friendly Hits:** This option toggles whether the actor ignores friendly fire or reacts to it.
@@ -23,7 +23,7 @@ Used for managing features and actors (i.e. followers and all types of commanded
 #### Context-Sensitive Casting Mechanics
 How the power behaves depends entirely on your weapon state when cast:
 
-- **Weapon Drawn (Pointing at a target):** Assigns the targeted NPC to the *Bond of Friendship* Actor Manager and immediately opens the single-actor menu to customize their features. If a follower or summon becomes hostile due to friendly fire, you can manually calm them using the lesser power *(Requires Papyrus Extender)*.
+- **Weapon Drawn (Pointing at a target):** Assigns the targeted NPC to the *Bond of Friendship* Actor Manager and immediately opens the single-actor menu to customize their features. If your followers or summons become hostile due to friendly fire, you can manually calm them using the lesser power *(Requires Papyrus Extender)*.
 - **Weapon Sheathed:** Opens the multiple-actor version of the menu to manage features and options for all assigned actors at once.
 
 
