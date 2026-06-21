@@ -70,6 +70,7 @@ The available requests and their scope depend entirely on your weapon state when
 
 <p align="center">Followers
 <br>
+    
   <a href="Screenshots/Followers.jpg">
     <img src="Screenshots/Followers.jpg" alt="Your Followers" width="600">
   </a>
