@@ -64,6 +64,8 @@ The available requests and their scope depend entirely on your weapon state when
 
 #### Available Commands for Commanded Actors
 - Follow, Wait, Inventory
+  <br>
+  <br> 
 
 ## Media
 *(Windows/Linux: Ctrl + Click to open image in a new tab | macOS: Cmd + Click)*
@@ -108,7 +110,8 @@ The available requests and their scope depend entirely on your weapon state when
     <br>    
     <a href="Screenshots/Requests - Meeting Point.jpg"><img src="Screenshots/Requests - Meeting Point.jpg" alt="Requests - Meeting Point" width="300"></a>
   </p>  
-</details>
+</details>  
+<br>
 
 ## Requirements
 
@@ -118,3 +121,32 @@ To unlock all features, please install these mods. Make sure to check their page
 - <a href="https://www.nexusmods.com/skyrimspecialedition/mods/22854">**powerofthree's Papyrus Extender**</a>
 - <a href="https://www.nexusmods.com/skyrimspecialedition/mods/76649">**ConsoleUtilSSE NG**</a> (Highly recommended, as it works on all Skyrim versions. Alternatively, you can use the original <a href="https://www.nexusmods.com/skyrimspecialedition/mods/24858">*ConsoleUtilSSE*</a> if you are on version 1.6.640 or older).
 - <a href="https://www.nexusmods.com/skyrimspecialedition/mods/17561">**UIExtensions**</a> (together with <a href="https://www.nexusmods.com/skyrimspecialedition/mods/127375">*UIExtensions Fixed ESP Plugin*</a>)
+    <br>
+    <br>
+
+## How to install
+
+### Option 1: Via Mod Manager (Highly Recommended)
+I highly recommend using a mod manager to keep your game clean and avoid installation errors.
+1. Download the mod via your preferred manager.
+2. Install and enable the mod.
+* **Vortex:** Very beginner-friendly and easy to use.
+* **Wrye Bash:** Great for advanced users (offers useful features like savegame profiles).
+*Both tools are available on Nexusmods.com.*
+
+### Option 2: Manual Installation (For Advanced Users)
+1. Download the mod archive manually and extract it.
+2. Copy the `Scripts` and `Source` folders, along with the `Bond of Friendship.esp`, directly into your Skyrim `Data` folder.
+3. Activate the `.esp` file. 
+
+*Note: You can activate the `.esp` directly in the game's main menu (Start Game ➔ Mods ➔ Load Order ➔ Check the box next to "Bond of Friendship.esp").*
+ <br>
+ <br>
+## Feedback & Bug Reports
+Bug reports and constructive feedback are always welcome! 
+
+If you encounter any issues during your playthrough or have suggestions, please feel free to open an issue here on GitHub. When reporting a bug, **please use the provided template** and fill out the details so I can help you fix the issue quickly.
+ <br>
+ <br>
+##  Script Sources 
+The source code for all scripts is located inside the `Source` folder of this repository and inside the downloaded archive. If you are curious, want to see how the mod works, or plan to study the script logic, feel free to take a look inside!
