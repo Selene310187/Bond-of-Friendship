@@ -85,4 +85,11 @@ The available requests and their scope depend entirely on your weapon state when
     <a href="Screenshots/Actor Manager - Page 1.jpg"><img src="Screenshots/Actor Manager - Page 1.jpg" alt="Actor Manager - Page 1" width="300"></a>
     <a href="Screenshots/Actor Manager - Page 2.jpg"><img src="Screenshots/Actor Manager - Page 2.jpg" alt="Actor Manager - Page 2" width="300"></a>
   </p>
+<p align="center">Debug Utility and Debug Actions
+    <br>
+    <br>
+    <a href="Screenshots/Debug Utility.jpg"><img src="Screenshots/Debug Utility.jpg" alt="Debug Utility" width="300"></a>
+    <a href="Screenshots/Debug Actions.jpg"><img src="Screenshots/Debug Actions.jpg" alt="Debug Actions" width="300"></a>
+  </p>  
+    
 </details>
