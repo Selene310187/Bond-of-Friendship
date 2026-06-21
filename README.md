@@ -8,10 +8,10 @@ This mod for Skyrim Special Edition introduces three lesser powers to make trave
 ### Lesser Power 1: Bond of Friendship (the Actor Manager)
 Used for managing features and actors (i.e. followers and all types of commanded actors such as summons or reanimated minions).
 
-- **Automatic Calm:** A passive ability that automatically stops any hostility due to friendly fire towards other actors who possess this ability and the player.
+- **Automatic Calm:** A passive ability that automatically stops any hostility due to friendly fire towards other actors who possess this ability, as well as the player. All of your follower's summons automatically receive the ability (requires **Papyrus Extender**).
 - **Friendly Hits:** This option toggles whether the actor ignores friendly fire or reacts to it.
 - **Knockout Prevention:** Grants a passive ability that automatically triggers when the actor's health drops below 40% to protect them from being knocked out.
-- **Edit Stats:** Customize the actor's attributes, including health, stamina, magicka, combat/magic/stealth skills, and resistances. (Only available in the single-actor version of this power. Requires UIExtensions.)
+- **Edit Stats:** Customize the actor's attributes, including health, stamina, magicka, combat/magic/stealth skills, and resistances. (Only available in the single-actor version of this power. **Requires UIExtensions**.)
 - **Mortality:** Change whether the actor is essential (immortal) or can be killed in combat.
 - **Quick Menu:** Replaces the actor's default activation with the "Bond of Friendship - Requests" menu. While active, normal dialogue options are suppressed, but you can still access them via the custom "Talk" command. 
 - **Teammate:** Toggles the actor's teammate status, ensuring they draw their weapon and sneak in sync with the player.
