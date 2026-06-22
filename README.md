@@ -58,7 +58,7 @@ The available requests and their scope depend entirely on your weapon state when
 
 - **Weapon Drawn (Targeted Actor):** Opens the single-target requests menu with the following options:
   - **Talk:** Initiates normal dialogue with the NPC (essential if the *Quick Menu* feature is active).
-  - **Wait / Follow:** Toggles whether the individual actor stands ground or stays with you.
+  - **Wait / Follow:** Toggles whether the individual actor stays at their current postion or resumes following you.
   - **Favor:** Commands the actor to perform a specific action in the environment (e.g., lockpicking, stealing, or sitting).
   - **Inventory:** Opens the actor's inventory container directly to trade gear.
 
