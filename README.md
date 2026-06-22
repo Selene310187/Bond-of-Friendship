@@ -26,6 +26,10 @@ How the power behaves depends entirely on your weapon state when cast:
 - **Weapon Drawn (Pointing at a target):** Assigns the targeted NPC to the *Bond of Friendship* Actor Manager and immediately opens the single-actor menu to customize their features. If your followers or summons become hostile due to friendly fire, you can manually calm them using the lesser power *(Requires Papyrus Extender)*.
 - **Weapon Sheathed:** Opens the multiple-actor version of the menu to manage features and options for all assigned actors at once.
 
+#### Special Note Regarding Dead Thralls
+To ensure they keep their assigned gear while traveling, I recommend enabling the "Auto Equip" and "Auto Teleport" features. Alternatively, you can give them the "Teammate" feature.
+
+When commanded to wait, Dead Thralls will freeze in place. This is intentional; their AI is temporarily disabled to prevent them from following you. Simply command them to follow again to unfreeze them.
 
 ### Lesser Power 2: Bond of Friendship - Debug Utility
 
