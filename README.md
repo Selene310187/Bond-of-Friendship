@@ -131,12 +131,18 @@ To unlock all features, please install these mods. Make sure to check their page
 ## How to install
 
 ### Option 1: Via Mod Manager (Highly Recommended)
+
 I highly recommend using a mod manager to keep your game clean and avoid installation errors.
-1. Download the mod via your preferred manager.
-2. Install and enable the mod.
-* **Vortex:** Very beginner-friendly and easy to use.
-* **Wrye Bash:** Great for advanced users (offers useful features like savegame profiles).
-*Both tools are available on Nexusmods.com.*
+
+1. Go to the **Releases** section on the right side of this GitHub page.
+2. Download the mod archive (e.g., `.zip` or `.7z`) under the latest release.
+3. Add the archive to your preferred mod manager:
+   * **Vortex:** Go to the "Mods" tab and drag and drop the downloaded ZIP file into the "Drop File(s) here" area at the bottom, or use the "Install From File" button in the top menu.
+   * **Wrye Bash:** Drag and drop the downloaded archive directly into the **Installers** tab of the Wrye Bash window, or manually move it into your **`Bash Installers`** directory.
+4. Install and enable the mod.
+
+*Note: Vortex is very beginner-friendly, while Wrye Bash is great for advanced users. Both tools are available on Nexusmods.com.*
+
 
 ### Option 2: Manual Installation (For Advanced Users)
 1. Download the mod archive manually and extract it.
