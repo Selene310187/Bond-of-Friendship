@@ -17,7 +17,6 @@ Faction Property BondOfFriendshipQuickM Auto
 BondOfFriendshipRequestsQScript Property Requests Auto
 Quest Property BondOfFriendshipRequestsQ Auto
 bool ReEquipping
-bool Property IsTeleporting Auto
 BondOfFriendshipMaintenance Property Maintenance Auto
 
 
@@ -103,10 +102,8 @@ EndEvent
 
 
 Event OnUnload()
-    
-    
     Actor akTarget = Self.GetActorReference()
-    If akTarget.IsDisabled() == True
+    If akTarget.IsDisabled() == True && akTarget.IsInFaction(Requests.BondOfFriendshipAutoEquip)
         ActorWasDisabled = True
     EndIf
 
@@ -119,17 +116,20 @@ Event OnUnload()
                 Teleporting()
             EndIf
         EndIf
-    EndIf  
-
+    EndIf
+    If Follower.HasSpell(BondOfFriendshipAutomaticTeleportSpell) == 0 && Follower.GetActorValue("WaitingForPlayer") == 0 && Follower.IsAIEnabled()
+        If Follower.IsCommandedActor() == True
+         if Follower.IsInFaction(Requests.BondOfFriendshipAutoEquip)
+             EquipCurrentOutfit()
+         endif
+        endif
+    endif
 EndEvent  
 
 Event OnLoad()
     Actor akTarget = Self.GetActorReference()
-    if ActorWasDisabled == True
-        ActorWasDisabled = False
-        if akTarget.IsInFaction(Requests.BondOfFriendshipAutoEquip)
-            EquipCurrentOutfit()
-        endif
+    if ActorWasDisabled == True 
+        EquipCurrentOutfit()
     endif
 EndEvent 
 
@@ -221,6 +221,24 @@ Function EquipCurrentOutfit()
         EndIf
         index += 1
     EndWhile
+    if ActorWasDisabled == True
+        index = 0
+        while index < CurrentOutfitList.Length
+            if Follower.GetItemCount(CurrentOutfitList[index]) < 1
+                Follower.AddItem(CurrentOutfitList[index], 1, true)
+                endif
+            
+            if Follower.IsEquipped(CurrentOutfitList[index]) == 0
+                Follower.equipitem(CurrentOutfitList[index])
+            EndIf
+            index += 1
+        EndWhile
+        ActorWasDisabled = False
+    endif
+    ; If an actor is disabled and the enabled, it's possible that an item won't be equipped during the first loop.
+    ; So the loop needed to be executed a second time to equip the item in question.
+    
+    
     if Follower.IsCommandedActor()
         if Follower.GetWornForm(0x00000004) == None
              Follower.AddItem(Requests.DummyItem, 1, true)

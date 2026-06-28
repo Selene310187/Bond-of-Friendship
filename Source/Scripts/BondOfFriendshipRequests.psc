@@ -25,18 +25,22 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
     
     if Target.GetCurrentScene() != None
         Debug.MessageBox("The actor is currently in a scene. Therefore, the menu cannot be accessed.")
+        Self.Dispel()
         Return
     else 
         if Target  && Target.GetCombatTarget() != PlayerRef  
             
             if Target.isinfaction(BondOfFriendshipAssigned) == 0
                 if ActorManager.ActorSlots < 11 && ActorManager.ActorSlots > 0
+                    Self.Dispel()
                     ActorManager.StartLesserPower1Menu(abPleaseAssign = True)
                 elseif ActorManager.ActorSlots == 0
                     BondOfFriendshipMaxSlotsReached.Show()
+                    Self.Dispel()
                 endif    
             else
                 Requests.AliasActorTemp.ForceRefTo(Target as ObjectReference)
+                Self.Dispel()
                 Requests.StartLesserPower3Menu()
             endif
         endif
@@ -44,8 +48,12 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
          if Target && Target.GetCombatTarget() == PlayerRef
             ;Debug.Notification("This doesn't work on hostile actors.")
             BondOfFriendshipHostileActor.Show()
+            Self.Dispel()
         endif
     endif
 EndEvent
 
+ Event OnEffectFinish(Actor akTarget, Actor akCaster)
+     Target = None
+EndEvent
 

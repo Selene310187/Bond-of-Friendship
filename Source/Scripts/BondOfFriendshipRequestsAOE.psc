@@ -33,13 +33,5 @@ Event OnEffectStart(Actor target, Actor caster)
     endif    
 EndEvent
 
-Event OnEffectFinish(Actor akTarget, Actor akCaster)
-    Requests.AliasActorTemp.Clear()
-    if Variables.CommandedActor == True
-        Variables.CommandedActor = False
-    endif
-      if Variables.SpectralDrum == True
-          Variables.SpectralDrum = False
-    endif  
-EndEvent
+
     

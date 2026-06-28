@@ -18,6 +18,20 @@ Message Property BondOfFriendshipFeatureDone Auto
 Message Property BondOfFriendshipMeetingPointCannotBeSet Auto
 Message Property BondOfFriendshipMeetingPointSetFirst Auto
 BondOfFriendshipMaintenance Property Maintenance Auto
+bool FollowAfterTeleport
+
+Function CleanUp()
+    AliasActorTemp.Clear()
+    Target = None
+    if Variables.CommandedActor == True
+        Variables.CommandedActor = False
+    endif
+      if Variables.SpectralDrum == True
+          Variables.SpectralDrum = False
+    endif 
+EndFunction    
+
+  
 
 
 
@@ -73,7 +87,7 @@ int Function RequestsMenu()
         else
             ActorTemp.Activate(PlayerRef, true)
         EndIf
-        
+        CleanUp()
         Return 0
     elseIf button == 1 ; Wait
         if ActorTemp.IsCommandedActor()
@@ -81,32 +95,44 @@ int Function RequestsMenu()
             ActorTemp.EnableAI(false)
             ActorTemp.Disable()
             ActorTemp.Enable()
+            CleanUp()
         else
             ActorTemp.SetActorValue("WaitingForPlayer", 1)
             ActorTemp.EvaluatePackage()
+            CleanUp()
         EndIf
        
         Return 0
     elseif button == 2 ; Follow
         if ActorTemp.IsCommandedActor()
             ActorTemp.EnableAI(true)
-        endif
-        ActorTemp.SetActorValue("WaitingForPlayer", 0)
-        ActorTemp.EvaluatePackage()
-        
+            ActorTemp.Disable()
+            ActorTemp.Enable()
+            if !ActorTemp.IsInFaction(ActorManager.BondOfFriendshipTeammate)
+                ActorTemp.SetPlayerTeammate(false)
+            endif 
+            CleanUp()
+        else
+            ActorTemp.SetActorValue("WaitingForPlayer", 0)
+            ActorTemp.EvaluatePackage()
+            CleanUp()
+        endif    
         Return 0
     elseif button == 3 ; Favor
         ActorTemp.SetDoingFavor()
-       
+        CleanUp()
         Return 0
     elseif button == 4 ; Inventory
-        if ActorTemp.IsInFaction(BondOfFriendshipAutoEquip)
+        if Maintenance.SKSEActive == True
             RegisterForMenu("ContainerMenu")
         endif
         ActorTemp.OpenInventory(true)
+        if Maintenance.SKSEActive == False
+            CleanUp()
+        endif
         Return 0
     elseif button == 5 ; exit
-      
+        CleanUp()    
         Return 0    
     endif
 EndFunction
@@ -137,7 +163,7 @@ int Function RequestsMenuAOE()
             endif
             iIndex += 1    
         EndWhile
-     
+        CleanUp()
         Return 0   
     elseif button == 1 ; Follow
         int iElement = ActorManager.ActorSlotsAlias.Length
@@ -175,10 +201,12 @@ int Function RequestsMenuAOE()
             endif
             iIndex += 1    
         EndWhile
+        CleanUp()
         Return 0
     elseif button == 2 ; Meeting Point
         Return 21
     elseif button == 3 ; exit
+        CleanUp()
         Return 0    
     endif
     
@@ -204,6 +232,7 @@ int Function MeetingPointMenu(bool bMenu = True)
         elseif button == 2 ; teleport all    
             if Variables.MeetingPointSet == True
                 bMenu = False
+                FollowAfterTeleport = True
                 PlayerRef.MoveTo(MeetingPoint)
                 Utility.Wait(0.1)
                 MoveFollowersToMeetingPoint()
@@ -216,7 +245,6 @@ int Function MeetingPointMenu(bool bMenu = True)
                 BondOfFriendshipMeetingPointSetFirst.Show()
             endif 
             if Variables.MeetingPointSet == True
-                
                 if Maintenance.PapyrusExtenderActive == True
                     int iElement = ActorManager.ActorSlotsAlias.Length
                     int iIndex = 0
@@ -246,6 +274,7 @@ int Function MeetingPointMenu(bool bMenu = True)
                     Utility.Wait(0.1)
                     PlayerRef.MoveTo(MeetingPoint)
                     bMenu = False
+                    CleanUp()
                     Return 0
                 endif
                
@@ -278,6 +307,7 @@ int Function MeetingPointMenu(bool bMenu = True)
                     Utility.Wait(0.1)
                     PlayerRef.MoveTo(MeetingPoint)
                     bMenu = False
+                    CleanUp()
                     Return 0
                 endif   
             else
@@ -286,6 +316,7 @@ int Function MeetingPointMenu(bool bMenu = True)
         elseif button == 4 ; teleport only followers
             if Variables.MeetingPointSet == True
                 bMenu = False
+                FollowAfterTeleport = False
                 MoveFollowersToMeetingPoint()
                 Return 0
             else
@@ -294,50 +325,31 @@ int Function MeetingPointMenu(bool bMenu = True)
         elseif button == 5 ; emergency teleport
             bMenu = False
             
-            if Maintenance.PapyrusExtenderActive == True
-                PlayerRef.MoveTo(EmergencyPoint)
-                Utility.Wait(0.1)
-                
-                int iElement = ActorManager.ActorSlotsAlias.Length
-                int iIndex = 0
-
-                While iIndex < iElement 
-                    if ActorManager.ActorSlotsAlias[iIndex].getreference()
-                        Target = ActorManager.ActorSlotsAlias[iIndex].getactorreference()
-                            if Target.GetActorValue("WaitingForPlayer") == 0 && Target.IsAIEnabled() && Target.GetCurrentScene() == None
-                                if ActorManager.IsPlayerFollower(Target as Actor) || ActorManager.IsPlayerSummon(Target as Actor)
-                                    float angleZ = EmergencyPoint.GetAngleZ()
-                                    Target.MoveTo(EmergencyPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
-                                    Target.EvaluatePackage()
-                                endif    
-                            endif  
-                        EndIf
-                    iIndex += 1    
-                EndWhile
-            endif
+            PlayerRef.MoveTo(EmergencyPoint)
+            Utility.Wait(0.1)
             
-            if Maintenance.PapyrusExtenderActive == False
-                PlayerRef.MoveTo(EmergencyPoint)
-                Utility.Wait(0.1)
-                
-                int iElement = ActorManager.ActorSlotsAlias.Length
-                int iIndex = 0
+            int iElement = ActorManager.ActorSlotsAlias.Length
+            int iIndex = 0
 
-                While iIndex < iElement 
-                    if ActorManager.ActorSlotsAlias[iIndex].getreference()
-                        Target = ActorManager.ActorSlotsAlias[iIndex].getactorreference()
-                            if Target.GetActorValue("WaitingForPlayer") == 0 && Target.IsAIEnabled() && Target.GetCurrentScene() == None
-                                if Target.IsInFaction(ActorManager.CurrentFollowerFaction) || Target.IsCommandedActor()
-                                    float angleZ = EmergencyPoint.GetAngleZ()
-                                    Target.MoveTo(EmergencyPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
-                                    Target.EvaluatePackage()
-                                endif    
-                            endif  
-                        EndIf
-                    iIndex += 1    
-                EndWhile
-            endif
-            
+            While iIndex < iElement 
+                if ActorManager.ActorSlotsAlias[iIndex].getreference()
+                    Target = ActorManager.ActorSlotsAlias[iIndex].getactorreference()
+                        if Target.GetCurrentScene() == None
+                            float angleZ = EmergencyPoint.GetAngleZ()
+                            Target.MoveTo(EmergencyPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
+                            if Target.IsCommandedActor() && Target.IsAIEnabled() == False
+                                Target.Disable()
+                                Target.Enable()
+                            endif    
+                            Target.EvaluatePackage()
+                            Target.SetAlert()
+                            Target.SetAlert(false)
+                        endif  
+                    EndIf
+                iIndex += 1    
+            EndWhile
+      
+            CleanUp()
             Return 0
         elseif button == 6 ; back    
             Return 2
@@ -346,75 +358,57 @@ int Function MeetingPointMenu(bool bMenu = True)
 EndFunction  
 
 Function MoveFollowersToMeetingPoint()
-    if Maintenance.PapyrusExtenderActive == True
-        int iElement = ActorManager.ActorSlotsAlias.Length
-        int iIndex = 0
+    int iElement = ActorManager.ActorSlotsAlias.Length
+    int iIndex = 0
 
-        While iIndex < iElement 
-            if ActorManager.ActorSlotsAlias[iIndex].getreference()
-                Target = ActorManager.ActorSlotsAlias[iIndex].getactorreference()
-                if Target.GetActorValue("WaitingForPlayer") == 0 && Target.IsAIEnabled() && Target.GetCurrentScene() == None
-                    if ActorManager.IsPlayerFollower(Target as Actor) || ActorManager.IsPlayerSummon(Target as Actor)
-                        if Target.IsCommandedActor()
-                                Target.SetPlayerTeammate(true)
-                                Target.EnableAI(false)
-                                Utility.Wait(0.7)
-                                float angleZ = MeetingPoint.GetAngleZ()
-                                Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
-                                Target.Disable()
-                                Target.Enable()
-                            else
-                                float angleZ = MeetingPoint.GetAngleZ()
-                                Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))  
-                                Target.SetActorValue("WaitingForPlayer", 1)
-                                Target.EvaluatePackage()
-                            endif  
-                        EndIf
-                    Endif
-                endif    
-                iIndex += 1    
-        EndWhile
-    Endif    
-        if Maintenance.PapyrusExtenderActive == False  
-        int iElement = ActorManager.ActorSlotsAlias.Length
-        int iIndex = 0
-
-        While iIndex < iElement 
-            if ActorManager.ActorSlotsAlias[iIndex].getreference()
-                Target = ActorManager.ActorSlotsAlias[iIndex].getactorreference()
-                if Target.GetActorValue("WaitingForPlayer") == 0 && Target.IsAIEnabled() && Target.GetCurrentScene() == None
-                   
-                        if Target.IsCommandedActor()
-                                Target.SetPlayerTeammate(true)
-                                Target.EnableAI(false)
-                                Utility.Wait(0.7)
-                                float angleZ = MeetingPoint.GetAngleZ()
-                                Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
-                                Target.Disable()
-                                Target.Enable()
-                            else
-                                if Target.IsInFaction(ActorManager.CurrentFollowerFaction)
-                                    float angleZ = MeetingPoint.GetAngleZ()
-                                    Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))  
-                                    Target.SetActorValue("WaitingForPlayer", 1)
-                                    Target.EvaluatePackage()
-                                endif
-                            endif  
-                        EndIf
-                   
-                endif    
-                iIndex += 1    
-        EndWhile  
-    Endif
+    While iIndex < iElement 
+        if ActorManager.ActorSlotsAlias[iIndex].getreference()
+            Target = ActorManager.ActorSlotsAlias[iIndex].getactorreference()
+            
+            if Target.GetCurrentScene() == None
+                if FollowAfterTeleport == False
+                    if Target.IsCommandedActor()
+                        Target.SetPlayerTeammate(true)
+                        Target.EnableAI(false)
+                        Utility.Wait(0.7)
+                        float angleZ = MeetingPoint.GetAngleZ()
+                        Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
+                        Target.Disable()
+                        Target.Enable()
+                    else
+                        float angleZ = MeetingPoint.GetAngleZ()
+                        Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
+                        Target.SetActorValue("WaitingForPlayer", 1)
+                        Target.EvaluatePackage()
+                        Target.SetAlert()
+                        Target.SetAlert(false) 
+                    endif  
+                endif
+                if FollowAfterTeleport == True
+                    if Target.IsCommandedActor()
+                        float angleZ = MeetingPoint.GetAngleZ()
+                        Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
+                        if Target.IsAIEnabled() == False
+                            Target.EnableAI(True)
+                            Target.Disable()
+                            Target.Enable()
+                        endif
+                    else
+                        float angleZ = MeetingPoint.GetAngleZ()
+                        Target.MoveTo(MeetingPoint, -100.0 * Math.Sin(angleZ), 100.0 * Math.Cos(angleZ))
+                        Target.SetActorValue("WaitingForPlayer", 0)
+                        Target.EvaluatePackage()
+                        Target.SetAlert()
+                        Target.SetAlert(false) 
+                    endif  
+                Endif
+            endif
+         endif   
+         iIndex += 1
+    EndWhile
+    CleanUp()    
 EndFunction    
 
-
-Event OnUpdate()
-    if !AliasActorTemp.getactorreference().IsDoingFavor()
-        StartLesserPower3Menu()
-    endif
-    UnregisterForUpdate()
-EndEvent
 
 Event OnMenuOpen(String MenuName)
     If MenuName == "ContainerMenu"
@@ -429,11 +423,6 @@ EndEvent
 
 
 Event OnMenuClose(String MenuName)
-    
-    if MenuName == "Dialogue Menu"
-        UnregisterForMenu("Dialoge Menu")    
-        RegisterForSingleUpdate(1)
-    endif    
         
     If MenuName == "ContainerMenu"
         ;Debug.Notification("ContainerMenu has been registered and has closed.")
@@ -484,7 +473,7 @@ Event OnMenuClose(String MenuName)
         UnregisterForMenu("ContainerMenu")
         LastInventory = None
         CurrentInventory = None
-      
+        CleanUp()
         ;Debug.notification("done")
     EndIf
 EndEvent

@@ -18,7 +18,6 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
     Target = akTarget
     if Target.GetCurrentScene() != None
         Debug.MessageBox("The actor is currently in a scene. Therefore, the menu cannot be accessed.")
-        Return
     else 
         if Target
             DebugUtility.BondOfFriendshipSlotCurrent.ForceRefTo(Target as ObjectReference)
@@ -28,3 +27,6 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 EndEvent
 
   
+Event OnEffectFinish(Actor akTarget, Actor akCaster)
+     Target = None
+EndEvent    

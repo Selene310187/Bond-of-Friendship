@@ -84,7 +84,7 @@ bool Function IsPlayerFollower(actor akActor)
     bool bBreak = False
     
     if followers != None
-        While (i < followers.Length) && !bBreak
+        While (i < followers.Length) && followers.Length > 0 && !bBreak
             If (followers[i] != None && followers[i] == akActor)
                 if followers[i].IsInFaction(BondOfFriendshipAssigned) == True 
                     bBreak = true
@@ -107,7 +107,7 @@ bool Function IsPlayerSummon(actor akActor)
     bool bBreak = False
     
     if thralls != None
-        While (i < thralls.Length) && !bBreak
+        While (i < thralls.Length) && thralls.Length > 0 && !bBreak
             If (thralls[i] != None && thralls[i] == akActor)
                 if thralls[i].IsInFaction(BondOfFriendshipAssigned) == True 
                     bBreak = true
@@ -120,9 +120,9 @@ bool Function IsPlayerSummon(actor akActor)
     endif    
 EndFunction
 
-; === Target Actors
-
-Function TargetActor(Int iLoopIterations = 20, Float fAreaToSearch = 1500.0)
+; === Target Actor
+    
+Function TargetActor()
     if Maintenance.SKSEActive == 0
         if Variables.CurrentLesserPower == 1
             BondOfFriendshipAimed.Cast(PlayerRef)
@@ -131,26 +131,19 @@ Function TargetActor(Int iLoopIterations = 20, Float fAreaToSearch = 1500.0)
         elseif Variables.CurrentLesserPower == 3    
             BondOfFriendshipRequestsAimed.Cast(PlayerRef)
         endif
-    else    
+    else
         Actor ActorTarget = Game.GetCurrentCrosshairRef() as Actor
-        
-        ; Fallback: If the crosshair fails, we roll for NPCs within range
-        
+      
         if ActorTarget == None
-            bool bBreak = False
-            While iLoopIterations > 0 && !bBreak
-                Actor Candidate = Game.FindRandomActorFromRef(PlayerRef, fAreaToSearch)
-                iLoopIterations -= 1
-                
-                if Candidate && Candidate != PlayerRef
-                    ; Does the player have a line of sight and is he looking roughly in that direction?
-                    if PlayerRef.HasLOS(Candidate) && PlayerRef.GetHeadingAngle(Candidate) > -35.0 && PlayerRef.GetHeadingAngle(Candidate) < 35.0
-                        ActorTarget = Candidate
-                        bBreak = True ; break loop
-                    endif
-                endif
-            EndWhile
-        endif
+            if Variables.CurrentLesserPower == 1
+                BondOfFriendshipAimed.Cast(PlayerRef)
+            elseif Variables.CurrentLesserPower == 2
+                BondOfFriendshipDebugUtilityAimed.Cast(PlayerRef)
+            elseif Variables.CurrentLesserPower == 3    
+                BondOfFriendshipRequestsAimed.Cast(PlayerRef)
+            endif
+            Return
+        endif    
         
         
         if ActorTarget && ActorTarget != PlayerRef
@@ -177,7 +170,6 @@ Function TargetActor(Int iLoopIterations = 20, Float fAreaToSearch = 1500.0)
                             Return
                         endif   
                     elseif Variables.CurrentLesserPower == 2
-                        DebugUtility.BondOfFriendshipSlotCurrent.Clear()
                         DebugUtility.BondOfFriendshipSlotCurrent.ForceRefTo(ActorTarget as ObjectReference)
                         DebugUtility.StartLesserPower2Menu(AOE = False)
                     elseif Variables.CurrentLesserPower == 3

@@ -24,15 +24,19 @@ Event OnEffectStart(Actor target, Actor caster)
     
     if caster.IsWeaponDrawn()
     Variables.WeaponDrawn = True
-        ActorManager.TargetActor()
+    ActorManager.TargetActor()
+        
     else
         Variables.WeaponDrawn = False
         if ActorManager.ActorSlots > 9
             ActorManager.StartLesserPower1Menu(abPleaseAssign = True)
+            
         elseif ActorManager.ActorSlots < 10
             DebugUtility.StartLesserPower2Menu(AOE = True)
         endif
     endif    
 EndEvent
 
+
+   
  
