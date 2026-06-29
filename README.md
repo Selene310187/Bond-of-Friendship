@@ -153,7 +153,7 @@ I highly recommend using a mod manager to keep your game clean and avoid install
 <br>
 <br>
 ## Feedback & Bug Reports
-Bug reports and constructive feedback are always welcome! If you encounter any issues during your playthrough or have suggestions to improve the mod, you can use the appropriate Google Form below.
+Bug reports and constructive feedback are always welcome! If you encounter any issues during your playthrough or have suggestions to improve the mod, you can use the appropriate Google Form below (a Google account is not required).
 <br>
 <br>
 <a href="https://forms.gle/pw1uLxUnVcLnywCS6">Report a bug</a> | <a href="https://forms.gle/S4iDSRyQwkYueK3E6">Request a feature</a>
