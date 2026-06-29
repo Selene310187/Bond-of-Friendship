@@ -150,16 +150,14 @@ I highly recommend using a mod manager to keep your game clean and avoid install
 3. Activate the `.esp` file. 
 
 *Note: You can activate the `.esp` directly in the game's main menu (Start Game ➔ Mods ➔ Load Order ➔ Check the box next to "Bond of Friendship.esp").*
- <br>
- <br>
+<br>
+<br>
 ## Feedback & Bug Reports
-Bug reports and constructive feedback are always welcome! 
-
-If you encounter any issues during your playthrough or have suggestions, you can report them under the following link:
-👉 **[https://github.com/Selene310187/Bond-of-Friendship/issues](https://github.com/Selene310187/Bond-of-Friendship/issues)**
-
-When creating an issue, **please select and use the provided template** (either for a Bug Report or a Feature Request) and fill out the details so I can look into it quickly.
- <br>
- <br>
+Bug reports and constructive feedback are always welcome! If you encounter any issues during your playthrough or have suggestions to improve the mod, you can use the appropriate Google Form below.
+<br>
+<br>
+<a href="https://forms.gle/pw1uLxUnVcLnywCS6">Report a bug</a> | <a href="https://forms.gle/S4iDSRyQwkYueK3E6">Request a feature</a>
+<br>
+<br>
 ##  Script Sources 
 The source code for all scripts is located inside the `Source` folder of this repository and inside the downloaded archive. If you are curious, want to see how the mod works, or plan to study the script logic, feel free to take a look inside!
