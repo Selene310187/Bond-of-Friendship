@@ -44,7 +44,7 @@ A "Swiss Army knife" for Skyrim SE follower management. Automatically adds three
 
 ## 📥 Download
 
-[GitHub](https://github.com/Selene310187/Bond-of-Friendship/releases/download/beta.1.1a/Bond.of.Friendship.-.Beta.1.1a.7z) *(direct download)*
+[GitHub](https://github.com/Selene310187/Bond-of-Friendship/releases/download/beta.1.1a/Bond.of.Friendship.-.Beta.1.1a.7z) *(direct download)* | [Google Drive](https://drive.google.com/file/d/1P2TmZznw_Tjsz1m8fJM8iO3CFRD8Rmf6/view)
 
 <br>
 
