@@ -2,7 +2,39 @@
     <picture>
   <img src="Screenshots/Bond of Friendship - Banner.png" alt="Bond of Friendship Logo" width="400">
     </picture>
-</p>    
+</p>
+
+<p align="right">
+  <em></em>Current version: Beta 1.1</em>
+</p>
+
+## 🌟 TL;DR
+
+A "Swiss Army knife" for Skyrim SE follower management. Automatically adds three lesser powers with context-sensitive menus (single-target when weapon is drawn, group-wide when sheathed):
+- Bond of Friendship: Manage followers & summons (auto-calm, friendly fire toggles, stat editing, mortality, auto-teleport, and more).
+- Bond of Friendship - Debug Utility: Quick-fixes for broken AI, stuck animations, and lost followers.
+- Bond of Friendship - Requests: Issue quick commands without dialogue menus (wait/follow, open inventory, set custom meeting points).
+
+*(Note: Requires SKSE64, Papyrus Extender, ConsoleUtilSSE NG, and UIExtensions for all features to work.)*
+
+
+
+## 📥 Download
+
+[GitHub](https://github.com/Selene310187/Bond-of-Friendship/releases/download/beta.1.1/Bond.of.Friendship.-.Beta.1.1.7z) *(direct download)*
+
+
+
+## 💬 Feedback & Bug Reports
+Bug reports and constructive feedback are always welcome! Feel free to post in the AFK Mods Thread, or use the optional Google Forms below (no Google account required):
+- AFK Mods: <a href=https://www.afkmods.com/index.php?/topic/8921-wip-relz-bond-of-friendship/>Visit the official thread</a>
+- Google Forms: <a href="https://forms.gle/pw1uLxUnVcLnywCS6">Report a bug</a> | <a href="https://forms.gle/S4iDSRyQwkYueK3E6">Request a feature</a>
+
+<br>
+
+
+# 🔍 The mod in detail
+
 This mod for Skyrim Special Edition introduces three lesser powers to make traveling with followers more comfortable. They are added to you automatically. Each lesser power opens a menu upon casting.
 
 ### Lesser Power 1: Bond of Friendship (the Actor Manager)
@@ -152,12 +184,7 @@ I highly recommend using a mod manager to keep your game clean and avoid install
 *Note: You can activate the `.esp` directly in the game's main menu (Start Game ➔ Mods ➔ Load Order ➔ Check the box next to "Bond of Friendship.esp").*
 <br>
 <br>
-## Feedback & Bug Reports
-Bug reports and constructive feedback are always welcome! If you encounter any issues during your playthrough or have suggestions to improve the mod, you can use the appropriate Google Form below (a Google account is not required).
-<br>
-<br>
-<a href="https://forms.gle/pw1uLxUnVcLnywCS6">Report a bug</a> | <a href="https://forms.gle/S4iDSRyQwkYueK3E6">Request a feature</a>
-<br>
-<br>
+
+
 ##  Script Sources 
 The source code for all scripts is located inside the `Source` folder of this repository and inside the downloaded archive. If you are curious, want to see how the mod works, or plan to study the script logic, feel free to take a look inside!
