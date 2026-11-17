@@ -26,16 +26,14 @@ A "Swiss Army knife" for Skyrim SE follower management. Automatically adds three
 
 
 ## 💬 Feedback & Bug Reports
-Bug reports and constructive feedback are always welcome! Feel free to post in the AFK Mods Thread, or use the optional Google Forms below (no Google account required):
-- AFK Mods: <a href=https://www.afkmods.com/index.php?/topic/8921-wip-relz-bond-of-friendship/>Visit the official thread</a>
-- Google Forms: <a href="https://forms.gle/pw1uLxUnVcLnywCS6">Report a bug</a> | <a href="https://forms.gle/S4iDSRyQwkYueK3E6">Request a feature</a>
+Bug reports and constructive feedback are always welcome! Feel free to post in the <a href=https://www.afkmods.com/index.php?/topic/8921-wip-relz-bond-of-friendship/>AFK Mods Thread</a>, or use the optional Google Forms below *(no Google account required)*:
+
+Google Forms: <a href="https://forms.gle/pw1uLxUnVcLnywCS6">Report a bug</a> | <a href="https://forms.gle/S4iDSRyQwkYueK3E6">Request a feature</a>
 
 <br>
 
-
-# 🔍 The mod in detail
-
-This mod for Skyrim Special Edition introduces three lesser powers to make traveling with followers more comfortable. They are added to you automatically. Each lesser power opens a menu upon casting.
+## 🔍 The lesser powers in detail
+Here is a complete breakdown of all three lesser powers and their features:
 
 ### Lesser Power 1: Bond of Friendship (the Actor Manager)
 Used for managing features and actors (i.e. followers and all types of summons including reanimated minions).
@@ -90,7 +88,7 @@ The available requests and their scope depend entirely on your weapon state when
 
 - **Weapon Drawn (Targeted Actor):** Opens the single-target requests menu with the following options:
   - **Talk:** Initiates normal dialogue with the NPC (essential if the *Quick Menu* feature is active).
-  - **Wait / Follow:** Toggles whether the individual actor stays at their current postion or resumes following you.
+  - **Wait / Follow:** Toggles whether the individual actor stays at their current position or resumes following you.
   - **Favor:** Commands the actor to perform a specific action in the environment (e.g., lockpicking, stealing, or sitting).
   - **Inventory:** Opens the actor's inventory container directly to trade gear.
 
