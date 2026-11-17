@@ -17,13 +17,36 @@ A "Swiss Army knife" for Skyrim SE follower management. Automatically adds three
 
 *(Note: Requires SKSE64, Papyrus Extender, ConsoleUtilSSE NG, and UIExtensions for all features to work.)*
 
+<br>
 
+---
+
+<details>
+<summary><strong>📑 Table of Contents</strong> (Click to expand)</summary>
+
+- [🌟 TL;DR](#-tldr)
+- [📥 Download](#-download)
+- [💬 Feedback & Bug Reports](#-feedback--bug-reports)
+- [🔍 The lesser powers in detail](#-the-lesser-powers-in-detail)
+  - [Lesser Power 1: Bond of Friendship (the Actor Manager)](#lesser-power-1-bond-of-friendship-the-actor-manager)
+  - [Lesser Power 2: Bond of Friendship - Debug Utility](#lesser-power-2-bond-of-friendship---debug-utility)
+  - [Lesser Power 3: Bond of Friendship - Requests](#lesser-power-3-bond-of-friendship---requests)
+- [Media](#media)
+- [Requirements](#requirements)
+- [How to install](#how-to-install)
+- [Script Sources](#script-sources)
+
+</details>
+
+---
+
+<br>
 
 ## 📥 Download
 
 [GitHub](https://github.com/Selene310187/Bond-of-Friendship/releases/download/beta.1.1/Bond.of.Friendship.-.Beta.1.1.7z) *(direct download)*
 
-
+<br>
 
 ## 💬 Feedback & Bug Reports
 Bug reports and constructive feedback are always welcome! Feel free to post in the <a href=https://www.afkmods.com/index.php?/topic/8921-wip-relz-bond-of-friendship/>AFK Mods Thread</a>, or use the optional Google Forms below *(no Google account required)*:
