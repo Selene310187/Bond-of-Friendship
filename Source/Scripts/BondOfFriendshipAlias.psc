@@ -89,6 +89,7 @@ EndEvent
 
 Event OnCellDetach()
     Actor Follower = Self.getactorreference()
+    ;Debug.Notification(Follower.GetActorBase().GetName()+" OnCellDetach")
     if Follower.HasSpell(BondOfFriendshipAutomaticTeleportSpell) == 1 && Follower.GetActorValue("WaitingForPlayer") == 0 && Follower.IsAIEnabled()
         
        if !Follower.IsInCombat() && !PlayerRef.IsInCombat() && !Follower.IsBleedingOut() && Follower.GetCurrentScene() == None
@@ -103,6 +104,7 @@ EndEvent
 
 Event OnUnload()
     Actor akTarget = Self.GetActorReference()
+    ;Debug.Notification(akTarget.GetActorBase().GetName()+" OnUnload")
     If akTarget.IsDisabled() == True && akTarget.IsInFaction(Requests.BondOfFriendshipAutoEquip)
         ActorWasDisabled = True
     EndIf
@@ -118,10 +120,8 @@ Event OnUnload()
         EndIf
     EndIf
     If Follower.HasSpell(BondOfFriendshipAutomaticTeleportSpell) == 0 && Follower.GetActorValue("WaitingForPlayer") == 0 && Follower.IsAIEnabled()
-        If Follower.IsCommandedActor() == True
-         if Follower.IsInFaction(Requests.BondOfFriendshipAutoEquip)
-             EquipCurrentOutfit()
-         endif
+        if Follower.IsInFaction(Requests.BondOfFriendshipAutoEquip)
+         EquipCurrentOutfit()
         endif
     endif
 EndEvent  
