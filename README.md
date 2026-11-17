@@ -5,7 +5,7 @@
 </p>
 
 <p align="right">
-  <em></em>Current version: Beta 1.1</em>
+  <em></em>Current version: Beta 1.1a</em>
 </p>
 
 ## 🌟 TL;DR
@@ -44,7 +44,7 @@ A "Swiss Army knife" for Skyrim SE follower management. Automatically adds three
 
 ## 📥 Download
 
-[GitHub](https://github.com/Selene310187/Bond-of-Friendship/releases/download/beta.1.1/Bond.of.Friendship.-.Beta.1.1.7z) *(direct download)*
+[GitHub](https://github.com/Selene310187/Bond-of-Friendship/releases/download/beta.1.1a/Bond.of.Friendship.-.Beta.1.1a.7z) *(direct download)*
 
 <br>
 
